@@ -1,4 +1,4 @@
-let socket = new WebSocket("ws://127.0.0.1:8080");
+let socket = new WebSocket("ws://93.213.151.57:8080");
 let counter = 0;
 
 socket.onopen = function(e) {
