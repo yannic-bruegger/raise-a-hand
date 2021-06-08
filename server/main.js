@@ -23,6 +23,7 @@ function accept(req, res) {
 
 function onConnect(ws) {
   ws.on('close', (x) => {
+    console.log('Take \'em out');
     admins.splice(admins.indexOf(ws), 1);
     users.splice(users.indexOf(ws), 1);
   });

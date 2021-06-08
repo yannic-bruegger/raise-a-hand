@@ -36,18 +36,19 @@ function connect(){
   socket.onerror = function(error) {
     console.error(`[error] ${error.message}`);
   };
-
-  function triggerAnimation() {
-    document.querySelector('#✋').classList.add('active');
-    document.querySelector('.votes').innerHTML = counter;
-  }
-
 }
+
 connect();
+
+function triggerAnimation() {
+  document.querySelector('#✋').classList.add('active');
+  document.querySelector('.votes').innerHTML = counter;
+}
 
 function clearHands() {
   counter = 0;
   document.querySelector('#✋').classList.remove('active');
   document.querySelector('.votes').innerHTML = counter;
 }
+
 document.querySelector('#✋').addEventListener('click', () => {clearHands();})
