@@ -22,6 +22,10 @@ function accept(req, res) {
 }
 
 function onConnect(ws) {
+  ws.on('close', (x) => {
+    admins.splice(admins.indexOf(ws), 1);
+    users.splice(users.indexOf(ws), 1);
+  });
   ws.on('message', function (message) {
     let command;
     try {

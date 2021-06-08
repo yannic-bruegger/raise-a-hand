@@ -11,6 +11,7 @@ socket.onmessage = function(event) {
 
 socket.onclose = function(event) {
   if (event.wasClean) {
+    socket = new WebSocket("wss://bcbb1475eec9.ngrok.io");
     console.log(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
   } else {
     console.log('[close] Connection died');
