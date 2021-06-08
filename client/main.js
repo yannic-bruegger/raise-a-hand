@@ -1,4 +1,4 @@
-let socket = new WebSocket("wss://bcbb1475eec9.ngrok.io:8080");
+let socket = new WebSocket("wss://bcbb1475eec9.ngrok.io");
 
 socket.onopen = function(e) {
   const data = {type: 'HELLO', role: 'user'};

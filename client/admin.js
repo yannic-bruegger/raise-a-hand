@@ -1,4 +1,4 @@
-let socket = new WebSocket("wss://bcbb1475eec9.ngrok.io:8080");
+let socket = new WebSocket("wss://bcbb1475eec9.ngrok.io");
 let counter = 0;
 
 socket.onopen = function(e) {
